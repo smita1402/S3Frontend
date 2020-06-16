@@ -950,8 +950,8 @@ function SettingsController($scope, SharedService) {
         }
 
         // If anonymous usage then create empty set of credentials
-        if ($scope.settings.auth === 'auth') {
-            $scope.settings.cred = { accessKeyId: "AKIARMWDJ2U64HK4VEPQ", secretAccessKey: "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"};
+       if ($scope.settings.auth === 'anon') {
+            $scope.settings.cred = { accessKeyId: null, secretAccessKey: null };
         }
 
         SharedService.changeSettings($scope.settings);
