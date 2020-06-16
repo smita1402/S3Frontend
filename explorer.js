@@ -923,10 +923,10 @@ function SettingsController($scope, SharedService) {
     // Initialized for an unauthenticated user exploring the current bucket
     // TODO: calculate current bucket and initialize below
     $scope.settings = {
-        auth: 'anon', region: '', bucket: '', entered_bucket: '', selected_bucket: '', view: 'folder', delimiter: '/', prefix: '',
+        auth: 'auth', region: '', bucket: '', entered_bucket: 'serverless-s3-s3bucket-1csut04zurq08', selected_bucket: '', view: 'folder', delimiter: '/', prefix: '',
     };
     $scope.settings.mfa = { use: 'no', code: '' };
-    $scope.settings.cred = { accessKeyId: '', secretAccessKey: '', sessionToken: '' };
+    $scope.settings.cred = { accessKeyId: 'AKIARMWDJ2U64HK4VEPQ', secretAccessKey: '', sessionToken: '' };
     $scope.settings.stscred = null;
 
     // TODO: at present the Settings dialog closes after credentials have been supplied
@@ -950,8 +950,8 @@ function SettingsController($scope, SharedService) {
         }
 
         // If anonymous usage then create empty set of credentials
-        if ($scope.settings.auth === 'anon') {
-            $scope.settings.cred = { accessKeyId: null, secretAccessKey: null };
+        if ($scope.settings.auth === 'auth') {
+            $scope.settings.cred = { accessKeyId: "AKIARMWDJ2U64HK4VEPQ", secretAccessKey: "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"};
         }
 
         SharedService.changeSettings($scope.settings);

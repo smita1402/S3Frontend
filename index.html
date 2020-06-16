@@ -2,14 +2,10 @@
 
 <!--
 Copyright 2018 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
 Licensed under the Apache License, Version 2.0 (the "License").
-
 You may not use this file except in compliance with the License. A copy
 of the License is located at
-
 http://aws.amazon.com/apache2.0/
-
 or in the "license" file accompanying this file. This file is distributed
 on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
 either express or implied. See the License for the specific language governing
@@ -53,7 +49,7 @@ permissions and limitations under the License.
                                         <div class="input-group bottom-marg-10">
                                             <span class="input-group-addon">Region</span>
                                             <select name="region" class="form-control" ng-model="settings.region">
-                                                <option value="ap-south-1">Asia Pacific (Mumbai)</option>
+                                                <option value="">Asia Pacific (Mumbai)</option>
                                                 <option value="ap-northeast-3">Asia Pacific (Osaka-Local)</option>
                                                 <option value="ap-northeast-2">Asia Pacific (Seoul)</option>
                                                 <option value="ap-southeast-1">Asia Pacific (Singapore)</option>
@@ -66,7 +62,7 @@ permissions and limitations under the License.
                                                 <option value="eu-west-3">EU (Paris)</option>
                                                 <option value="eu-north-1">EU (Stockholm)</option>
                                                 <option value="sa-east-1">South America (São Paulo)</option>
-                                                <option value="">US East (N. Virginia)</option>
+                                                <option value="us-east-1">US East (N. Virginia)</option>
                                                 <option value="us-east-2">US East (Ohio)</option>
                                                 <option value="us-west-1">US West (N. California)</option>
                                                 <option value="us-west-2">US West (Oregon)</option>
@@ -75,7 +71,7 @@ permissions and limitations under the License.
                                         <div class="input-group bottom-marg-10" ng-show="settings.buckets.length">
                                             <span class="input-group-addon">Bucket</span>
                                             <select name="bucketlist" class="form-control" ng-model="settings.selected_bucket" placeholder="bucket" ng-required="buckets.length">
-                                                <!-- <option value="" disabled selected>Select a bucket ...</option> -->
+                                                <option value="" disabled selected>Select a bucket ...</option>
                                                 <option ng-repeat="bucket in settings.buckets" value="{{bucket}}">{{bucket}}</option>
                                                 <option value="">Other ...</option>
                                             </select>
@@ -96,7 +92,7 @@ permissions and limitations under the License.
                                         <p ng-hide="settings.auth=='anon'"><b>Credentials</b>: this web page uses the <a href="http://aws.amazon.com/sdk-for-browser/" target="_blank">AWS SDK for JavaScript in the Browser</a>. Your AWS credentials are kept in memory and used by the SDK for authentication. Your secret access key is used to sign API requests but it is <b>not</b> sent to the S3 service.</p>
                                         <div class="input-group bottom-marg-10" ng-hide="settings.auth=='anon'">
                                             <span class="input-group-addon">Access Key ID</span>
-                                            <input name="accesskey" type="text" ng-model="settings.cred.accessKeyId" class="form-control" ng-disabled="settings.auth=='anon'" placeholder="access key id" required/>
+                                            <input name="accesskey" type="text"  ng-model="settings.cred.accessKeyId" class="form-control" ng-disabled="settings.auth=='anon'" placeholder="access key id" required/>
                                         </div>
                                         <div class="input-group bottom-marg-10" ng-hide="settings.auth=='anon'">
                                             <span class="input-group-addon">Secret Access Key</span>
