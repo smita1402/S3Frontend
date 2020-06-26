@@ -923,7 +923,7 @@ function SettingsController($scope, SharedService) {
     // Initialized for an unauthenticated user exploring the current bucket
     // TODO: calculate current bucket and initialize below
     $scope.settings = {
-        auth: 'auth', region: '', bucket: '', entered_bucket: 'serverless-s3-s3bucket-1csut04zurq08', selected_bucket: '', view: 'folder', delimiter: '/', prefix: '',
+        auth: 'auth', region: '', bucket: '', entered_bucket: 'clouduploader-s3bucket-15nl8prkvtm3q', selected_bucket: '', view: 'folder', delimiter: '/', prefix: '',
     };
     $scope.settings.mfa = { use: 'no', code: '' };
     $scope.settings.cred = { accessKeyId: 'AKIARGFXIOUJX63ESQ6B', secretAccessKey: '', sessionToken: '' };
